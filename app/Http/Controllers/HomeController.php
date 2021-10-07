@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    function index()
     {
-        $movies = Movie::all();
-        return view('home', ['movies' => $movies]);
+        return view('home');
     }
 }

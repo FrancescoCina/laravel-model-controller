@@ -15,4 +15,10 @@ class MovieController extends Controller
         $movies = Movie::all();
         return view('movies.index', ['movies' => $movies]);
     }
+
+    function show($id)
+    {
+        $movie = Movie::find($id);
+        return view('movies.show', compact('movie'));
+    }
 }
